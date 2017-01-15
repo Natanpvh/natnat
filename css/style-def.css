@@ -1,0 +1,768 @@
+/*Fontes personalizadas*/
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i&subset=cyrillic,latin-ext');
+
+@import url('https://fonts.googleapis.com/css?family=Oswald:300,400,700&subset=latin-ext');
+
+@import url('https://fonts.googleapis.com/css?family=Arima+Madurai:100,200,300,400,500,700,800,900');
+/*Fontes padão*/
+h2{font-family: 'Arima Madurai', cursive;}
+h3{font-family: 'Arima Madurai', cursive;}
+h4{font-family: 'Arima Madurai', cursive;}
+a{font-family: 'Arima Madurai', cursive;}
+.cat-link{
+    font-family: 'Arima Madurai', cursive;
+    color: #bd0730;
+    font-weight: bold;
+}
+
+.stilo2{
+     background-image: url("../img/tp_blog.png"); 
+     background-repeat: no-repeat;    
+     background-position: 70% -0%;
+}
+.stilo2{
+     background-image: url("../img/tp_blog.png"); 
+     background-repeat: no-repeat;    
+     background-position: 32% -1%;
+
+}
+.logo{
+    width: 255px;
+    height: 202px;
+    display: block;
+    background-image: url("../img/logo1.png"); 
+    background-repeat: no-repeat; 
+   
+}
+.logo:hover{
+    width: 255px;
+    height: 202px;
+    display: block;
+     background-image: url("../img/logo1.png");  
+    background-repeat: no-repeat;
+    background-position-x: -259px; 
+}
+/* nav box*/
+.nav-box{
+    margin-bottom: 0;
+}
+/* Cor para os icones sociais*/
+.btn-cor{
+    color: rgba(189, 7, 48, 1);
+}
+/**/
+.nav-pills li a{
+    text-transform: unset;
+}
+/*Perfil do blogueiro*/
+.box-n{
+    background: url("../img/bek-perfil.png") no-repeat center top;  
+    margin-top: 30px; 
+}
+.box-a{
+    border: none;
+}
+/*Tabs Noticias mais lidas*/
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+     font-family: 'Oswald', sans-serif;
+    color: #fff;
+    cursor: default;
+    background-color: #bd0730;
+    border: 1px solid #ddd;
+    border-bottom-color: transparent;
+    font-size: 18px;
+    padding: 10px 30px 10px 30px;
+}
+/*Lista ultimas 5*/
+.nav-stacked>li {
+    border-radius: 0;
+     border-bottom: 1px dotted #ccc;
+}  
+.nav-stacked>li>a {
+    border-radius: 0;
+}
+.nav-stacked>li>a>span{
+    font-family: 'Oswald', sans-serif;
+    font-size: 27px;
+    color: #bd0730;
+    margin-right: 10px;
+    font-weight: bold;
+}
+/*Remove a borda do ultimo item da lista*/
+.nav-stacked>li:last-child {
+    border-bottom: 0!important;
+}
+/*Perfil do blogueiro*/
+.perfil{   
+    font-family: 'Oswald', sans-serif; 
+    padding: 5px 10px 5px 13px;
+    color: #333;   
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 8px 8px 0 8px;
+}
+.perfil span{
+    font-weight: 300;
+}
+.content-perfil{
+  display: block;
+  position: relative;
+  overflow: hidden;   
+  text-align: center;
+}
+.content-list-post{
+  display: block;
+  position: relative;
+  overflow: hidden; 
+}
+
+.perfil-previl-n{
+    position: absolute;
+    bottom: 0px !important;
+    width: 100%;
+    visibility: visible;
+    display: block;
+    color: #f12b24;;
+}
+.perfil-previl{
+    font-size: 14px;
+    color: #e01b1b;
+}
+.previl-titulo-video{
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+.previl-titulo-video a{
+    font-family: 'Oswald', sans-serif;
+    color: #000;
+    font-size: 17px;
+    text-transform: capitalize;
+
+}
+
+/*Nome*/
+.nat-nome{
+    font-family: 'Oswald', sans-serif;    
+    padding: 5px 10px 5px 13px;
+    color: rgba(254, 207, 137, 1);
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 8px 8px 0 8px;    
+    border-bottom: 1px solid;
+
+}
+/*Coisas de naty*/
+.coias{   
+    font-family: 'Playfair Display', serif;   
+    padding: 5px 10px 5px 13px;
+    color: rgba(189, 7, 48, 1);
+    font-weight: bold;  
+
+}
+.container-color1{
+    background: rgba(30, 30, 30, 0.97);
+    color: #fff;
+
+}
+.container-linha{
+    padding: 14px 0;
+}
+.parallax {
+    width: 100%;   
+    overflow: hidden;
+    display: block;
+}
+/*Imagens*/
+.thumbnail{
+    border: none;
+    padding: 0;
+}
+.catedory{
+    width: 100%;
+    padding: 0 0 5px 0;
+    display: block;
+}
+.link-category{
+    text-transform: uppercase;
+    color: #bd0730;
+}
+.post-categories{
+    padding: 0;
+}
+.post-categories li{
+    list-style: none;
+}
+.post-categories li a{
+    text-transform: uppercase;
+    color: #bd0730;
+}
+.prev-titulo{
+    padding: 0 0 10px 0; 
+    text-decoration: none;   
+}
+.prev-titulo-perfil{    
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: rgb(255, 212, 221);
+    padding: 10px;   
+    color: #bd0730;
+}
+    
+a:focus, a:hover{
+    text-decoration: none;
+}
+.prev-titulo h3{
+    margin: 5px 0 0 0;
+    padding: 0 0 10px 0;
+    font-weight: bold;
+    color: #686868;    
+}
+.prev-titulo h3:hover{
+    margin: 5px 0 0 0;
+    padding: 0 0 10px 0;
+    font-weight: bold;
+    color: #bd0730;
+    font-family: 'Arima Madurai', cursive;
+    text-decoration: none;
+}
+
+/*Titulo post*/
+.post-titulo{
+    margin: 5px 0 0 0;
+    padding: 0 0 10px 0;
+    font-weight: bold;
+    color: #bd0730; 
+    font-family: 'Arima Madurai', cursive;
+    font-size: 2.7em;
+  
+}
+.caption p{
+    font-size: 16px;
+}
+/*Data Post*/
+.data-post{
+    width: 205px;
+    float: left;
+    color: #838383;
+}
+/*p-coizas*/
+.p-coizas{
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    padding: 5px 10px 5px 13px;
+    color: #000;
+    font-size: 16px;
+
+}
+/*Flores*/
+.flores{
+    background-image: url("../img/flores.png");  
+    background-repeat: no-repeat;
+    background-position: top left;
+
+}
+/*zumm*/
+.item > img {
+   width: 100%; 
+	border-radius: 2px;
+	-webkit-transition: all .8s cubic-bezier(.190, 1.000, .220, 1.000);
+	    -moz-transition: all .8s cubic-bezier(.190, 1.000, .220, 1.000);
+	     -ms-transition: all .8s cubic-bezier(.190, 1.000, .220, 1.000);
+	      -o-transition: all .8s cubic-bezier(.190, 1.000, .220, 1.000);
+	         transition: all .8s cubic-bezier(.190, 1.000, .220, 1.000);
+}
+.item:hover > img {
+	-webkit-transform: scale(1.5);
+	   -moz-transform: scale(1.5);
+	    -ms-transform: scale(1.5);
+	     -o-transform: scale(1.5);
+	        transform: scale(1.5);
+}
+/*Link*/
+.prev-galeria-titulo h3 a{
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+
+}
+.thumbnail a{
+    width: 100%;
+    display: block;
+    overflow: hidden;
+
+}
+
+.thumbnail a > img {
+   width: 100%; 
+	border-radius: 2px;
+	-webkit-transition: all .8s cubic-bezier(.190, 1.000, .220, 1.000);
+	    -moz-transition: all .8s cubic-bezier(.190, 1.000, .220, 1.000);
+	     -ms-transition: all .8s cubic-bezier(.190, 1.000, .220, 1.000);
+	      -o-transition: all .8s cubic-bezier(.190, 1.000, .220, 1.000);
+	         transition: all .8s cubic-bezier(.190, 1.000, .220, 1.000);
+}
+.thumbnail a:hover > img {
+	-webkit-transform: scale(1.5);
+	   -moz-transform: scale(1.5);
+	    -ms-transform: scale(1.5);
+	     -o-transform: scale(1.5);
+	        transform: scale(1.5);
+}
+/*box*/
+.borda-box{    
+    margin-bottom: 10px;
+    padding-bottom: 15px;
+}
+.previl-post{
+    width: 100%;
+    display: block;
+    overflow: hidden;
+}
+.previl-post-category{
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    border-bottom: 1px dotted #ccc;
+}
+
+
+.box-contet{
+    padding: 15px 0 0 0;
+}
+.box-contet-fotos{
+    padding:0;
+    overflow: hidden;
+}
+.caption{
+    padding: 0;
+}
+/* Previl Galeria de fotos*/
+.prev-galeria{
+   
+}
+.galeria-destaque{
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+.galeria-destaque:hover{
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+.galeria-destaque .prev-galeria-titulo{
+    position: absolute;
+    bottom:-100px;   
+    width: 100%;
+    visibility: hidden;
+    display: block;
+}
+.galeria-destaque:hover .prev-galeria-titulo{
+    position: absolute;
+    bottom: 0px !important;
+    background-image: url("../img/bek-hover.png");
+    background-repeat: repeat-x;
+    background-position: bottom;
+    width: 100%;
+    visibility: visible;
+    display: block;
+    color: #fff;
+    
+}
+
+.box-border{
+    /*border-bottom: 1px solid #eee;*/
+    margin-bottom: 15px;
+}
+   
+.stilo-link{
+    font-style: italic;
+}
+/*Menu Personalizado*/
+.logo-mobaio{
+    display: none;
+}
+.navbar-header-visivel{
+    display: block!important;
+}
+#custom-bootstrap-menu.navbar-default .navbar-brand {
+    color: rgba(194, 190, 190, 1);
+}
+#custom-bootstrap-menu.navbar-default {
+    font-size: 16px;
+    background-color: rgba(189, 7, 48, 1);
+    border-width: 0px;
+    border-radius: 0px;
+    padding: 10px;
+}
+#custom-bootstrap-menu.navbar-default .navbar-nav>li>a {
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(248, 248, 248, 0);    
+    
+}
+.navbar-default .navbar-nav > li > a {
+    color: #fff;
+    border-right: 1px solid rgba(0,0,0,.2);
+    box-shadow: 1px 0 0 rgba(255, 255, 255, 0.10);
+    text-transform: uppercase;
+}
+
+.navbar-nav > li > a {
+    padding-top: 18px;
+    padding-bottom: 18px;
+}
+#custom-bootstrap-menu.navbar-default .navbar-nav>li>a:hover,
+#custom-bootstrap-menu.navbar-default .navbar-nav>li>a:focus {
+    color: rgba(189, 7, 48, 1);
+    background-color: #333;
+}
+#custom-bootstrap-menu.navbar-default .navbar-nav>.active>a,
+#custom-bootstrap-menu.navbar-default .navbar-nav>.active>a:hover,
+#custom-bootstrap-menu.navbar-default .navbar-nav>.active>a:focus {
+    color: rgba(189, 7, 48, 1);
+    background-color: #333;
+}
+#custom-bootstrap-menu.navbar-default .navbar-toggle {
+    border-color: #CD5C5C;
+}
+#custom-bootstrap-menu.navbar-default .navbar-toggle:hover,
+#custom-bootstrap-menu.navbar-default .navbar-toggle:focus {
+    background-color: #CD5C5C;
+}
+#custom-bootstrap-menu.navbar-default .navbar-toggle .icon-bar {
+    background-color: #e01b1b;
+}
+#custom-bootstrap-menu.navbar-default .navbar-toggle:hover .icon-bar,
+#custom-bootstrap-menu.navbar-default .navbar-toggle:focus .icon-bar {
+    background-color: #bd0730;
+}
+/*Busca modal*/
+.search{
+    font-size: 1.5em;
+    color: #fff;
+    margin-top: 14px;    
+    display: block;
+    cursor: pointer
+}
+.search:hover{
+    font-size: 1.5em;
+    color: #ccc;
+    margin-top: 14px;    
+    display: block;
+
+}
+
+/*Footer*/
+footer {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+/*Texto Slide personalizado*/
+.carousel-caption h3{
+text-transform: uppercase;
+font-size: 25px;
+width: 467px;
+padding: 15px;
+text-align: left;
+color: #fff;
+}
+.carousel-caption p{
+font-family: 'Arima Madurai', cursive;    
+font-size: 16px;
+width: 550px;
+background-image: url("../img/pixel2.png");
+padding: 15px;
+text-align: left;
+color: #fff;
+}
+/*Texto do post*/
+.con-text{
+    font-size: 18px;
+    line-height: 1.8;
+    text-align: justify;
+}
+/*Captular texto do post*/
+.con-text:first-letter {
+display:block;
+margin: -30px 10px 0 0;
+float:left;
+color:#bd0730;
+font-size:80px;
+font-family: 'Arima Madurai', cursive;
+}
+.carousel-caption {
+    right: 20%;
+    left: 6%;
+    padding-bottom: 30px;
+}
+.box-line{
+    border-bottom: 1px solid #eee;
+    margin-bottom: 15px;
+}
+/*Barra*/
+.barra {
+    position: absolute;
+    font-size: 1px;
+    height: 6px;
+    width: 80px;
+    overflow: hidden;
+    bottom: -1px;
+    left: 0px;
+    background: #bd0730;
+}
+.barra-galeria {
+    position: absolute;
+    font-size: 1px;
+    height: 6px;
+    width: 80px;
+    overflow: hidden;
+    bottom: -1px;
+    left: 0px;
+    background: #ff33cc;
+}
+.aut-foto{
+    width: 100%;
+    display: block;
+    position: relative;
+    top: -21px;
+    left: 10px;
+    color: #fff;
+    font-size: 12px;
+}
+
+/*Container do rodape do site*/
+.footer-box{
+        padding-top: 30px;
+        background:url("../img/bek-footer.png") no-repeat center bottom #fff;
+        border-top: 2px solid #bd0730;
+        padding-bottom: 0;
+        overflow: hidden;
+}
+.container-footer{
+    border-top: 1px solid #fff;
+    background: #f69c9d;
+    padding: 10px 0 15px 0;
+    text-align: center;
+    color: #fff;
+}
+.footer-top{
+    font-size: 18px;
+}
+.footer-top a{
+    color: #bd0730;
+}
+.m-box{
+    border-right: 2px solid #fff;
+    margin-top: 25px;
+}
+.m-box-footer h4{   
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;       
+}
+.m-box img{
+    position: relative;    
+    left: -38px;
+    top: 15px;
+}
+/*Menu de rodape*/
+.menu-item-footer {
+    width: 100%;
+    float: left;
+    list-style: none outside none;
+    margin-left: -43px;   
+}
+.menu-item-footer li a{
+    color: #fff;
+}
+/*404 error*/
+.error-404-erro{
+    font-size: 200px;
+    line-height: 200px;
+    color: #f05d72;
+    padding: 0px 0 10px 0;
+    font-family: 'Arima Madurai', cursive;
+    text-align: center;
+}
+.cont-404-c{
+    clear: both;
+    font-family: 'Arima Madurai', cursive;    
+    letter-spacing: -1px;
+    font-weight: 100 !important;
+    text-align: center;
+    color: #f05d72;
+}
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="carousel-caption"] {
+        display: none;
+    }
+
+    .stilo2{
+     background-image: url("../img/tp_blog_mob.png"); 
+     background-repeat: no-repeat;    
+     background-position: 50% -1%;
+}
+}
+.texte-form-commentext{
+    width: 100%;
+}
+.comment {
+    overflow: hidden;
+    padding: 0 0 1em;
+    border-bottom: 1px solid #ddd;
+    margin: 0 0 1em;
+    *zoom: 1;
+}
+
+.comment-img {
+    float: left;
+    margin-right: 33px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.comment-img img {
+    display: block;
+}
+
+.comment-body {
+    overflow: hidden;
+}
+
+.comment .text {
+    padding: 10px;
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+    background: #fff;
+}
+
+.comment .text p:last-child {
+    margin: 0;
+}
+
+.comment .attribution {
+    margin: 0.5em 0 0;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Decoration */
+
+.comments,
+.comment {
+    position: relative;
+}
+
+.comments:before,
+.comment:before,
+.comment .text:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 65px;
+}
+
+.comments:before {
+    width: 3px;
+    top: -20px;
+    bottom: -20px;
+    background: rgba(0,0,0,0.1);
+}
+
+.comment:before {
+    width: 9px;
+    height: 9px;
+    border: 3px solid #fff;
+    border-radius: 100px;
+    margin: 16px 0 0 -6px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.2), inset 0 1px 1px rgba(0,0,0,0.1);
+    background: #ccc;
+}
+
+.comment:hover:before {
+    background: orange;
+}
+
+.comment .text:before {
+    top: 18px;
+    left: 78px;
+    width: 9px;
+    height: 9px;
+    border-width: 0 0 1px 1px;
+    border-style: solid;
+    border-color: #e5e5e5;
+    background: #fff;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+}​
+
+/*////////////////*/
+#comments{
+    width:630px;
+    float:left;
+    border-top:1px solid #bebebe;
+    }
+ 
+#comments h3{
+    font-size:14px;
+    margin:20px 0;
+    }
+ 
+ol.commentlist{
+    list-style:none;
+    }
+ 
+ol.commentlist li{
+    margin-bottom:30px;
+    }
+ 
+ol.commentlist ul{
+    margin:0px;
+    }
+ 
+ol.commentlist ul li{
+    margin:20px 20px 20px 40px;
+    }
+ 
+#respond{
+    margin:0 0 30px 0;
+    clear:both;
+    }
+ 
+#respond form label{
+    float:left;
+    clear:left;
+    width:60px;
+    text-align:right;
+    margin-right:10px;
+    }
+ 
+#respond form input{
+    float:left;
+    width:250px;
+    margin-bottom:10px;
+    }
+ 
+#respond form textarea{
+    float:left;
+    width:400px;
+    height:100px;
+    margin-bottom:10px;
+    }
+ 
+#respond form input.commentsubmit{
+    float:left;
+    margin-left:70px;
+    }
+
+/*Imagem Post*/
+img.alignright { float: right; margin: 0 0 1em 1em; }
+img.alignleft { float: left; margin: 0 1em 1em 0; }
+img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
+.alignright { float: right; }
+.alignleft { float: left; }
+.aligncenter { display: block; margin-left: auto; margin-right: auto; }
