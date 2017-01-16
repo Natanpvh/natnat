@@ -1,58 +1,84 @@
 <?php
 
+/**
+ * Nat Nat Funções e definições
+ *
+ * Configure o tema e fornece algumas funções auxiliares, que são usadas no
+ * Tema como tags de modelo personalizado. Outros são conectados à ação e filtro
+ * Ganchos no WordPress para alterar a funcionalidade do núcleo.
+ *
+ * Ao usar um tema infantil, você pode substituir determinadas funções (as
+ * Em uma chamada function_exists ()), definindo-os primeiro no tema do seu filho
+ * Arquivo functions.php. O arquivo functions.php do tema filho está incluído antes
+ * O arquivo do tema pai, para que as funções do tema filho seriam usadas.
+ *
+ * @link https://codex.wordpress.org/Theme_Development
+ * @link https://codex.wordpress.org/Child_Themes
+ *
+ * Funções que não são plugáveis ​​(não wrapped em function_exists ()) são
+ * Em vez disso anexado a um filtro ou gancho de ação
+ *
+ * Para obter mais informações sobre ganchos, ações e filtros,
+ * {@link https://codex.wordpress.org/Plugin_API}
+ *
+ * @package WordPress
+ * @subpackage NatNat
+ * @since Nat Nat 1.0
+ */
+/**
+ * Nat Nat funciona no WordPress 4.4 ou posterior.
+ */
+if (!function_exists('nat_setup')) :
 
-
-if ( ! function_exists( 'nat_setup' ) ) :
-
-function nat_setup() {	
+    function nat_setup() {
 // Remove a barra de admin
-add_filter('show_admin_bar', '__return_false');
+        add_filter('show_admin_bar', '__return_false');
 
 // Remove a versão do WordPress do cabeçalho
-remove_action('wp_head', 'wp_generator');
+        remove_action('wp_head', 'wp_generator');
 
 // Remove wlwmanifest_link - Recurso usado pelo Windows Live Writer. 
-remove_action('wp_head', 'wlwmanifest_link');
+        remove_action('wp_head', 'wlwmanifest_link');
 //
-remove_action('wp_head', 'wp_shortlink_wp_head', 10, 0);
+        remove_action('wp_head', 'wp_shortlink_wp_head', 10, 0);
 
 //
-remove_action('wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
+        remove_action('wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
 
 //
-remove_action('wp_head', 'start_post_rel_link', 10, 0);
+        remove_action('wp_head', 'start_post_rel_link', 10, 0);
 //
-remove_action( 'wp_head', 'feed_links', 2 ); 
+        remove_action('wp_head', 'feed_links', 2);
 
 // Remover link RSD
-remove_action('wp_head', 'rsd_link');
+        remove_action('wp_head', 'rsd_link');
 
 // Ativa o feed
-add_theme_support('automatic-feed-links'); 
+        add_theme_support('automatic-feed-links');
 // Suporte a resumo nas paginas
-add_post_type_support( 'page', 'excerpt' );
+        add_post_type_support('page', 'excerpt');
 
 // Remove estilos da galeria
-add_filter('use_default_gallery_style', '__return_false');
+        add_filter('use_default_gallery_style', '__return_false');
 // Ativa posts-formats
-add_theme_support('post-formats', array('audio', 'aside', 'chat', 'gallery', 'image', 'link', 'quote', 'status', 'video'));
+        add_theme_support('post-formats', array('audio', 'aside', 'chat', 'gallery', 'image', 'link', 'quote', 'status', 'video'));
 
-/*
-* Let WordPress manage the document title.
-* By adding theme support, we declare that this theme does not use a
-* hard-coded <title> tag in the document head, and expect WordPress to
-* provide it for us.
-*/
-add_theme_support( 'title-tag' );
-}
+        /*
+         * Let WordPress manage the document title.
+         * By adding theme support, we declare that this theme does not use a
+         * hard-coded <title> tag in the document head, and expect WordPress to
+         * provide it for us.
+         */
+        add_theme_support('title-tag');
+    }
 
 endif; // nat_setup
-add_action( 'after_setup_theme', 'nat_setup' );
+add_action('after_setup_theme', 'nat_setup');
 
 // Estilos e scripts
 function tutsup_enqueue_scripts() {
     // Versão do nosso tema
-    $tutsup_version = '1.0';   
+    $tutsup_version = '1.0';
 
     // Style.css
     wp_enqueue_style('tutsup-style-description', get_stylesheet_uri(), array(), $tutsup_version, 'all');
@@ -72,7 +98,7 @@ function starter_scripts() {
     // Carega os scripts js
     wp_deregister_script('jquery');
     wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js', false, '1.11.3', true);
-    wp_enqueue_script('jquery');   
+    wp_enqueue_script('jquery');
 
     wp_enqueue_script('includes1', get_template_directory_uri() . '/js/bootstrap.min.js', '', '', true);
     wp_enqueue_script('includes2', get_template_directory_uri() . '/js/social-likes.min.js', '', '', true);
@@ -82,16 +108,17 @@ function starter_scripts() {
 add_action('wp_enqueue_scripts', 'starter_scripts');
 
 /*
-* Adicion supoete a imagens personalizadas
-*
-*/
-function tutsup_setup() {       
-    if ( function_exists( 'add_theme_support' ) ) { 
+ * Adicion supoete a imagens personalizadas
+ *
+ */
+
+function tutsup_setup() {
+    if (function_exists('add_theme_support')) {
         add_theme_support('post-thumbnails');
-        add_image_size( 'single-post-home', 284, 195, true ); 
-        add_image_size( 'imagem-do-slide', 1073, 409, true );
-        add_image_size( 'Thumb Test cropped', 100, 100, true );
-        }     
+        add_image_size('single-post-home', 284, 195, true);
+        add_image_size('imagem-do-slide', 1073, 409, true);
+        add_image_size('Thumb Test cropped', 100, 100, true);
+    }
 
     // Registra um menu
     register_nav_menus(array(
@@ -120,10 +147,6 @@ function excerpt($limit) {
     return $excerpt;
 }
 
-
-
-
-
 $args = array(
     'comment_field' => '<p class="comment-form-comment"><label for="comment">' . _x('Comment', 'noun') . '</label><textarea id="comment" class="form-control" name="comment" cols="45" rows="8" required></textarea></p>',
     'fields' => apply_filters('comment_form_default_fields', array(
@@ -149,67 +172,65 @@ $args = array(
 comment_form($args);
 
 function awesome_comment_form_submit_button($button) {
-	$button =
-		'<input name="submit" type="submit" class="btn btn-info pull-right" tabindex="5" id="[args:id_submit]" value="Cadastrar" />' .
-		get_comment_id_fields();
-	return $button;
+    $button = '<input name="submit" type="submit" class="btn btn-info pull-right" tabindex="5" id="[args:id_submit]" value="Cadastrar" />' .
+            get_comment_id_fields();
+    return $button;
 }
+
 add_filter('comment_form_submit_button', 'awesome_comment_form_submit_button');
 
-
 //functions file
-function the_category_exclude($separator=', ',$exclude='') {
-	$toexclude = explode(",", $exclude);
-	$newlist = array();
-	foreach((get_the_category()) as $category) {
-		if(!in_array($category->category_nicename,$toexclude) && ($category->category_parent == 0)){
-			//$newlist[] = $category->cat_name;
-			$newlist[] = '<a href="' . get_category_link( $category->term_id ) . '" class="cat-link" title="' . sprintf( __( "Ver todas as postagens de %s" ), $category->name ) . '" ' . '>'  . $category->name.'</a>';
-		}
-	}
-	return implode($separator,$newlist);
+function the_category_exclude($separator = ', ', $exclude = '') {
+    $toexclude = explode(",", $exclude);
+    $newlist = array();
+    foreach ((get_the_category()) as $category) {
+        if (!in_array($category->category_nicename, $toexclude) && ($category->category_parent == 0)) {
+            //$newlist[] = $category->cat_name;
+            $newlist[] = '<a href="' . get_category_link($category->term_id) . '" class="cat-link" title="' . sprintf(__("Ver todas as postagens de %s"), $category->name) . '" ' . '>' . $category->name . '</a>';
+        }
+    }
+    return implode($separator, $newlist);
 }
 
-
 //attach our function to the wp_pagenavi filter
-add_filter( 'wp_pagenavi', 'ik_pagination', 10, 2 );
-  
+add_filter('wp_pagenavi', 'ik_pagination', 10, 2);
+
 //customize the PageNavi HTML before it is output
 function ik_pagination($html) {
     $out = '';
-  
+
     //wrap a's and span's in li's
-    $out = str_replace("<div","",$html);
-    $out = str_replace("class='wp-pagenavi'>","",$out);
-    $out = str_replace("<a","<li><a",$out); 
-    $out = str_replace("</a>","</a></li>",$out);
-    $out = str_replace("<span","<li class='active'><span",$out);   
-    $out = str_replace("</span>","</span></li>",$out);
-    $out = str_replace("</div>","",$out);
-  
-    return '<ul class="pagination pagination-centered">'.$out.'</ul>';
+    $out = str_replace("<div", "", $html);
+    $out = str_replace("class='wp-pagenavi'>", "", $out);
+    $out = str_replace("<a", "<li><a", $out);
+    $out = str_replace("</a>", "</a></li>", $out);
+    $out = str_replace("<span", "<li class='active'><span", $out);
+    $out = str_replace("</span>", "</span></li>", $out);
+    $out = str_replace("</div>", "", $out);
+
+    return '<ul class="pagination pagination-centered">' . $out . '</ul>';
 }
 
 // Registro das suas widgets
 // Register Sidebars
 function custom_sidebars() {
 
-	$args = array(
-		'id'            => 'sidebar-1',
-		'class'         => 'panel panel-default box-n',
-		'name'          => __( 'POSTS MAIS QUENTES', 'text_domain' ),
-		'description'   => __( 'Postes Mais Acessados', 'text_domain' ),
-		'before_title'  => '<h2 class="perfil">',
-		'after_title'   => '</h2>',
-		'before_widget' => '<div id="home" class="tab-pane fade in active">',
-		'after_widget'  => '</div>',
-	);
-	register_sidebar( $args );
-
+    $args = array(
+        'id' => 'sidebar-1',
+        'class' => 'panel panel-default box-n',
+        'name' => __('POSTS MAIS QUENTES', 'text_domain'),
+        'description' => __('Postes Mais Acessados', 'text_domain'),
+        'before_title' => '<h2 class="perfil">',
+        'after_title' => '</h2>',
+        'before_widget' => '<div id="home" class="tab-pane fade in active">',
+        'after_widget' => '</div>',
+    );
+    register_sidebar($args);
 }
-add_action( 'widgets_init', 'custom_sidebars' );
 
-/*-------------------------------------------
- INCLUDES DE ARQUIVOS
----------------------------------------------*/
+add_action('widgets_init', 'custom_sidebars');
+
+/* -------------------------------------------
+  INCLUDES DE ARQUIVOS
+  --------------------------------------------- */
 include get_template_directory() . '/custon-post-type/galerias.php';

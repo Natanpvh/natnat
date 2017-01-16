@@ -1,5 +1,19 @@
 <?php
-/// Register Custom Post Type
+/**
+ * Implementando funcionalidades de post personalizados
+ *
+ * @package WordPress
+ * @subpackage NatNat
+ * @since Nat Nat 1.0
+ */
+ /**
+ * Configura a configuração de post personalizado do WordPress.
+ *
+ * @since Nat Nat 1.0
+ *
+ * @uses custom_post_type_galerias()
+ */
+
 function custom_post_type_galerias() {
 
 	$labels = array(
